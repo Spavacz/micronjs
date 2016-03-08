@@ -1338,8 +1338,7 @@ var Button = Sprite.extend({
         Graphics.drawRect(this.x, this.y, this.width, this.height, 1, 1, 1);
     },
     onClickInput: function(x, y) {
-        var offset = Graphics.getCanvasOffset();
-        if (this.isPointInRect((x - offset.left) / Graphics.scale.x, (y - offset.top) / Graphics.scale.y) && this.enabled) {
+        if (this.isPointInRect(x, y) && this.enabled) {
             this.onClickFunc(this);
         }
     }

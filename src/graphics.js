@@ -743,13 +743,7 @@ var Button = Sprite.extend({
 
     onClickInput : function(x, y)
     {
-        var offset = Graphics.getCanvasOffset();
-
-        // todo: account for camera offset!
-        if(
-            this.isPointInRect((x - offset.left) / Graphics.scale.x, (y - offset.top) / Graphics.scale.y) &&
-            this.enabled
-        )
+        if(this.isPointInRect(x, y) && this.enabled)
         {
             this.onClickFunc(this);
         }
