@@ -1232,6 +1232,10 @@ var Sprite = Entity.extend({
         this.center.x = this.x + this.width / 2;
         this.center.y = this.y + this.height / 2;
     },
+    setXY: function(x, y) {
+        this.x = x;
+        this.y = y;
+    },
     setUV: function(x, y, w, h) {
         this.uv = {
             x: x,
@@ -1249,6 +1253,10 @@ var Sprite = Entity.extend({
             w: this.width,
             h: this.height
         };
+    },
+    setScale: function(x, y) {
+        this.scale.x = x;
+        this.scale.y = y;
     },
     collides: function(other) {
         var distance;
