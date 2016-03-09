@@ -1189,8 +1189,8 @@ var Sprite = Entity.extend({
         };
     },
     draw: function() {
-        this.callParent();
         Graphics.drawSpriteCropped(this.img, this.x, this.y, this.width, this.height, this.angle, this.scale.x, this.scale.y, this.alpha, this.uv.x, this.uv.y, this.uv.w, this.uv.h);
+        this.callParent();
     },
     drawDebug: function() {
         if (this.useBoundingBox) {

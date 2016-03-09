@@ -512,8 +512,6 @@ var Sprite = Entity.extend({
 
     draw : function()
     {
-        this.callParent();
-
         Graphics.drawSpriteCropped(
             this.img,
             this.x,
@@ -529,6 +527,8 @@ var Sprite = Entity.extend({
             this.uv.w,
             this.uv.h
         );
+
+        this.callParent();
     },
 
     drawDebug : function()
